@@ -1,8 +1,14 @@
+import { SignInButton, SignedIn, SignedOut, UserButton } from "@clerk/nextjs";
+
 export default function Home() {
   return (
-    <div className="flex justify-center align-middle">
-      <h1>Home</h1>
-      <button>Click me</button>
+    <div className="flex items-center justify-center h-screen">
+      <SignedOut>
+        <SignInButton />
+      </SignedOut>
+      <SignedIn>
+        <UserButton />
+      </SignedIn>
     </div>
   );
 }
